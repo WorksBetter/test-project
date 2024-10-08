@@ -27,6 +27,8 @@ The SecurePrivacy project is a full-stack application built using Angular for th
       dotnet run
       ```
     - This backend provides API endpoints for CRUD operations, and integrates with MongoDB to store and retrieve data. It also ensures GDPR compliance with the necessary data privacy measures.
+    
+      > **Note:** The API is setup to run on port `5036`, incase this port is running a different process on your system, you can update it in both API and UI projects.
 
 ## Functionality
 
