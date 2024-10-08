@@ -4,10 +4,17 @@ The SecurePrivacy project is a full-stack application built using Angular for th
 
 ## Project Structure
 
+- **MongoDB**:
+    - **How to run**:
+      ```bash
+      mongosh
+      ```
+
 - **SecurePrivacyUI**: This is the Angular-based frontend.
     - **How to run**:
       ```bash
       cd SecurePrivacyUI
+      npm install
       ng serve
       ```
     - This part of the project implements a simple UI to interact with the backend API, performing CRUD operations on a MongoDB database. It also includes features for GDPR compliance.
@@ -16,6 +23,7 @@ The SecurePrivacy project is a full-stack application built using Angular for th
     - **How to run**:
       ```bash
       cd SecurePrivacyAPI
+      dotnet restore
       dotnet run
       ```
     - This backend provides API endpoints for CRUD operations, and integrates with MongoDB to store and retrieve data. It also ensures GDPR compliance with the necessary data privacy measures.
