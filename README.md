@@ -1,4 +1,4 @@
-# TEST_PROJECT
+# TEST PROJECT
 
 This repository contains two primary projects:
 
