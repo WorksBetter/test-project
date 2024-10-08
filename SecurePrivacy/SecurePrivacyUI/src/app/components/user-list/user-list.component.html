@@ -1,0 +1,34 @@
+<div *ngIf="(users$ | async)?.length ?? 0 > 0; else noUsersTemplate">
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users$ | async" class="user-row">
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>
+          <button class="edit-btn" (click)="editUser(user)">Edit</button>
+          <button
+            *ngIf="user.id"
+            class="delete-btn"
+            (click)="deleteUser(user.id)"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<ng-template #noUsersTemplate>
+  <div class="no-users">
+    <p>No users found!</p>
+    <button (click)="navigateToCreateUser()">Create New User</button>
+  </div>
+</ng-template>
